@@ -1,0 +1,18 @@
+ALGORITHM tri_insertion
+VAR
+    n:INTEGER
+    i,j:INTEGER:=0
+    Tab : ARRAY_OF INTEGER[50];
+BEGIN
+
+ FOR i FROM 2 TO n DO
+     v := Tab[ i ] ; 
+     j := i ;    
+     WHILE ( Tab[ j-1 ] > v ) DO
+        Tab[ j ]  := Tab[ j-1 ]; 
+                j := j-1; 
+     END_WHILE  
+      Tab[ j ]:= v 
+  
+    END_FOR
+END
